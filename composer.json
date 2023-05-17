@@ -1,4 +1,14 @@
 {
+  "repositories": {
+        "0": {
+            "type": "composer",
+            "url": "https://composer.typo3.org/"
+        },
+	"kitodo": {
+            "type": "git",
+            "url": "https://github.com/beatrycze-volk/kitodo-presentation.git"
+        }
+    },
   "name": "slub/slub-digitalcollections",
   "type": "typo3-cms-extension",
   "description": "Templates, Styles and Configuration for the Kitodo.Presentation based Digital Collections by SLUB Dresden",
@@ -28,7 +38,7 @@
   "license": "GPL-3.0-or-later",
   "require": {
     "typo3/cms-core": "~9.5|^10.4",
-    "kitodo/presentation": "^4.0|dev-master"
+    "kitodo/presentation": "dev-fix-sachsen-digital"
   },
   "autoload": {
     "psr-4": {
