@@ -141,6 +141,10 @@
 				<source><![CDATA[Entries %s to %s from %s.]]></source>
 				<target><![CDATA[Einträge %s bis %s von %s.]]></target>
 			</trans-unit>
+            <trans-unit id="nohits" approved="yes">
+				<source><![CDATA[Nothing found.]]></source>
+				<target><![CDATA[Keine Treffer.]]></target>
+			</trans-unit>
 			<trans-unit id="structure" approved="yes">
 				<source><![CDATA[Type]]></source>
 				<target><![CDATA[Strukturtyp]]></target>

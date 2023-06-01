@@ -369,6 +369,9 @@
 			<trans-unit id="sortinfo" xml:space="preserve">
 				<source>Entries %s to %s from %s.</source>
 			</trans-unit>
+            <trans-unit id="nohits" xml:space="preserve">
+				<source>Nothing found</source>
+			</trans-unit>
 			<trans-unit id="form.orderBy" xml:space="preserve">
 				<source>Order by:</source>
 			</trans-unit>

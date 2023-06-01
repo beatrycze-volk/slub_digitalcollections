@@ -27,9 +27,16 @@
    <f:variable name="numDocuments" value="{pageOffset + settings.list.paginate.itemsPerPage}" />
    <p class="tx-dlf-search-numHits">Die Suche ergab {rawResults.numFound} Treffer in {allDocuments} Dokumenten.</p>
    <p class="tx-dlf-sortinfo">
-      <f:translate
-         key="LLL:EXT:slub_digitalcollections/Resources/Private/Language/locallang_kitodo.xlf:sortinfo"
-         arguments="{0:'{pageOffset + 1}',1:'{f:if(condition: \'{numDocuments} > {allDocuments}\', then: \'{allDocuments}\', else: \'{numDocuments}\')}', 2:'{allDocuments}'}" />
+    <f:if condition="{allDocuments} > 0">
+        <f:then>
+            <f:translate
+                key="LLL:EXT:slub_digitalcollections/Resources/Private/Language/locallang_kitodo.xlf:sortinfo"
+                arguments="{0:'{pageOffset + 1}',1:'{f:if(condition: \'{numDocuments} > {allDocuments}\', then: \'{allDocuments}\', else: \'{numDocuments}\')}', 2:'{allDocuments}'}" />
+        </f:then>
+        <f:else>
+            <f:translate key='LLL:EXT:slub_digitalcollections/Resources/Private/Language/locallang_kitodo.xlf:nohits' extensionName='slub_digitalcollections' />
+        </f:else>
+    </f:if>
    </p>
 
    <f:form section="showResults" action="search" name="searchParameter" method="post" class="tx-dlf-search-form">
