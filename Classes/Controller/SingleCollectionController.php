@@ -23,13 +23,14 @@ namespace Slub\SlubDigitalcollections\Controller;
  *
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
-use TYPO3\CMS\Core\Utility\GeneralUtility;
-
 use Kitodo\Dlf\Common\Document;
 use Kitodo\Dlf\Domain\Repository\DocumentRepository;
 use Kitodo\Dlf\Domain\Repository\StructureRepository;
 use Kitodo\Dlf\Domain\Repository\CollectionRepository;
 use Kitodo\Dlf\Domain\Repository\MetadataRepository;
+use TYPO3\CMS\Core\Core\Environment;
+use TYPO3\CMS\Core\Information\Typo3Version;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 class SingleCollectionController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {
@@ -149,6 +150,11 @@ class SingleCollectionController extends \TYPO3\CMS\Extbase\Mvc\Controller\Actio
         $widgetPage = $this->getParametersSafely('@widget_0');
         if (empty($widgetPage)) {
             $widgetPage = ['currentPage' => 1];
+        }
+
+        // Add uHash parameter to suggest parameter to make a basic protection of this form.
+        if ($this->settings['suggest']) {
+            $this->view->assign('uHash', GeneralUtility::hmac((string) (new Typo3Version()) . Environment::getExtensionsPath(), 'SearchSuggest'));
         }
 
         $this->view->assign('documents', $solrSearch);

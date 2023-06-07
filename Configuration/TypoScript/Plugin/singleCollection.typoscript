@@ -19,6 +19,7 @@ plugin.tx_slubdigitalcollections_singlecollection {
             maximumNumberOfLinks = 10
             section = showResults
         }
+        suggest = 1
         solr {
             host = {$config.kitodo.solr.host}/{$config.kitodo.solr.coreName}
             timeout = {$config.kitodo.solr.timeout}

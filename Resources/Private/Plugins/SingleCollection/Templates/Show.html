@@ -17,6 +17,11 @@
       </div>
       <f:form.hidden property="orderBy" value="{lastSearch.orderBy}" />
       <f:form.hidden property="order" value="{lastSearch.order}" />
+      <f:if condition="{settings.suggest}">
+        <!-- must be made as input instead f:form.hidden so the names have not added extension part -->
+        <input type="hidden" name="solrcore" value="{settings.solrcore}" />
+        <input type="hidden" name="uHash" value="{uHash}" />
+    </f:if>
    </div>
 </f:form>
 
