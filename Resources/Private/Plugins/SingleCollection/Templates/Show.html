@@ -5,6 +5,8 @@
       <label for="tx-dlf-search-query"><f:translate key='LLL:EXT:slub_digitalcollections/Resources/Private/Language/locallang_kitodo.xlf:form.query' extensionName='slub_digitalcollections' />
       </label>
       <f:form.textfield type="text" id="tx-dlf-search-query" property="query" value="{lastSearch.query}" placeholder="{f:translate(key='LLL:EXT:slub_digitalcollections/Resources/Private/Language/locallang_kitodo.xlf:form.query', extensionName='slub_digitalcollections')}"></f:form.textfield>
+        <!-- The following element is needed for auto-completion! -->
+        <div id="tx-dlf-search-suggest"></div>
       <button type="submit" title="{f:translate(key='LLL:EXT:slub_digitalcollections/Resources/Private/Language/locallang_kitodo.xlf:form.search', extensionName='slub_digitalcollections')}">
          <f:translate key='LLL:EXT:slub_digitalcollections/Resources/Private/Language/locallang_kitodo.xlf:form.search' extensionName='slub_digitalcollections' />
       </button>
