@@ -20,10 +20,8 @@
             </f:then>
             <f:else>
                 <f:if condition="{gp-query}">
-                    <f:then>
-                        <!-- A search has been executed > call search plugin again > redirect to result listview -->
-                        <f:cObject typoscriptObjectPath="lib.kitodo.fulltext.search" />
-                    </f:then>
+                    <!-- A search has been executed > call search plugin again > redirect to result listview -->
+                    <f:cObject typoscriptObjectPath="lib.kitodo.fulltext.search" />
                 </f:if>
                 <f:if condition="{isNewspaper} == 'newspaper_issue'">
                     <!-- it's a newspaper! -->
@@ -46,9 +44,7 @@
                     <div class="tx-dlf-toolsFulltextsearch">
                         <div class="fulltext-search-toggle"></div>
                         <f:if condition="{f:cObject(typoscriptObjectPath:'plugin.tx_dlf_searchindocumenttool')}">
-                            <f:then>
-                                <f:cObject typoscriptObjectPath="plugin.tx_dlf_searchindocumenttool" />
-                            </f:then>
+                            <f:cObject typoscriptObjectPath="plugin.tx_dlf_searchindocumenttool" />
                         </f:if>
                     </div>
                     <div id="tx-dlf-fulltextselection"></div>
