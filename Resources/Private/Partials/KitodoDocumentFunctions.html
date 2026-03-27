@@ -1,5 +1,10 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true" lang="en">
 
+<f:variable name="dvLinksXpath">//mets:amdSec/mets:digiprovMD/mets:mdWrap[@OTHERMDTYPE="DVLINKS"]/mets:xmlData/dv:links</f:variable>
+<f:variable name="fileGrpXpath">//mets:fileSec/mets:fileGrp</f:variable>
+<f:variable name="fulltextLocationXpath">({fileGrpXpath}[@USE="FULLTEXT"]/mets:file[1]/mets:FLocat/@xlink:href)</f:variable>
+<f:variable name="modsXpath">//mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods</f:variable>
+
 <div class="document-functions">
     <div class="provider">
         <f:comment><!-- [provider logo] ----------------------------- --></f:comment>

@@ -19,7 +19,7 @@
             </f:for>
           </f:then>
           <f:else>
-            <f:for each="{dc:xpath(xpath:'(//mets:mets/mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:relatedItem[@type=\'series\']/mods:titleInfo/mods:title[@lang=\'ger\'])', returnArray:'TRUE')}" as="collection" iteration="iterator">
+            <f:for each="{dc:xpath(xpath:'(//mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:relatedItem[@type=\'series\']/mods:titleInfo/mods:title[@lang=\'ger\'])', returnArray:'TRUE')}" as="collection" iteration="iterator">
             _paq.push(['setCustomVariable', '{iterator.cycle}', 'Digitale Kollektionen', '{collection}', 'visit']);
             </f:for>
           </f:else>

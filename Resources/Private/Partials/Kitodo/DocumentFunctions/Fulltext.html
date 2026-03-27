@@ -1,7 +1,7 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
       xmlns:dc="http://typo3.org/ns/Slub/SlubDigitalcollections/ViewHelpers" data-namespace-typo3-fluid="true" lang="en">
 
-<f:variable name="xpath"><dc:xpath xpath='(//mets:fileSec/mets:fileGrp[@USE="FULLTEXT"]/mets:file[1]/mets:FLocat/@xlink:href)[1]' /></f:variable>
+<f:variable name="xpath"><dc:xpath xpath='{fulltextLocationXpath}[1]' /></f:variable>
 
 <f:if condition="{xpath}">
     <f:if condition="{gp-double} == 1">
