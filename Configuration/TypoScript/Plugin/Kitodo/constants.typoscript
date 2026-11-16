@@ -1,6 +1,18 @@
-###################################################
-# All used Constants for SLUB Digital Collections
-###################################################
+@import 'EXT:schema/Configuration/TypoScript/constants.typoscript'
+
+plugin.tx_schema {
+    settings {
+        # Automatically wrap your Kitodo entity inside a WebPage schema node
+        automaticWebPageSchemaGeneration = 1
+
+        # Disable automatic breadcrumb generation if Kitodo uses dynamic URL parameters
+        automaticBreadcrumbSchemaGeneration = 0
+
+        # Output the JSON-LD script tag inside the <head> section (recommended for crawlers)
+        embedMarkupInBodySection = 0
+    }
+}
+
 plugin.tx_slubdigitalcollections {
     # basic solr config
     solr {

@@ -1,0 +1,14 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  Slub\SlubDigitalcollections\:
+    resource: '../Classes/*'
+
+  Slub\SlubDigitalcollections\EventListener\KitodoSchemaListener:
+    tags:
+      - name: event.listener
+        identifier: 'slub-digitalcollections/add-json-ld'
+        event: TYPO3\CMS\Frontend\Event\BeforePageIsRenderedEvent

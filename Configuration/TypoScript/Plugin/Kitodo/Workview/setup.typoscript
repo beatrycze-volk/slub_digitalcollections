@@ -1,3 +1,4 @@
+@import 'EXT:schema/Configuration/TypoScript/setup.typoscript'
 
 [traverse(page, 'backend_layout') == 'pagets__kitodo']
     plugin.tx_slubdigitalcollections.disableWrapInBaseClass = 1
